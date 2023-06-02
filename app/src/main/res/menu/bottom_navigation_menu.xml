@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_characters_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_person_outline_24"
+        android:title="@string/bottom_navigation_characters_label_text" />
+    <item
+        android:id="@+id/bottom_navigation_locations_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_location_on_outline_24"
+        android:title="@string/bottom_navigation_locations_label_text" />
+    <item
+        android:id="@+id/bottom_navigation_episodes_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_movie_outline_24"
+        android:title="@string/bottom_navigation_episodes_label_text" />
+</menu>
