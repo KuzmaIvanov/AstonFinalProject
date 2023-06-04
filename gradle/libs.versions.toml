@@ -8,6 +8,9 @@ espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.9.0"
 constraintlayout = "2.1.4"
+dagger = "2.44"
+retrofit = "2.9.0"
+gson = "2.9.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -17,6 +20,10 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger"}
+daggerCompiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger"}
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gson"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

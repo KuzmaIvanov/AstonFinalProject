@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AstonFinalProject</string>
+    <string name="bottom_navigation_characters_label_text">Characters</string>
+    <string name="bottom_navigation_locations_label_text">Locations</string>
+    <string name="bottom_navigation_episodes_label_text">Episodes</string>
 </resources>
