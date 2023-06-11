@@ -1,9 +1,18 @@
 package com.example.astonfinalproject.di
 
-import com.example.astonfinalproject.MainActivity
-import com.example.astonfinalproject.data.RickAndMortyRepositoryImpl
+import com.example.astonfinalproject.data.repositories.CharactersRepositoryImpl
+import com.example.astonfinalproject.data.repositories.LocationsRepositoryImpl
 import com.example.astonfinalproject.data.network.RickAndMortyService
-import com.example.astonfinalproject.domain.RickAndMortyRepository
+import com.example.astonfinalproject.data.repositories.EpisodesRepositoryImpl
+import com.example.astonfinalproject.domain.repositories.CharactersRepository
+import com.example.astonfinalproject.domain.repositories.EpisodesRepository
+import com.example.astonfinalproject.domain.repositories.LocationsRepository
+import com.example.astonfinalproject.presentation.screens.CharactersFragment
+import com.example.astonfinalproject.presentation.screens.EpisodesFragment
+import com.example.astonfinalproject.presentation.screens.FilterCharactersFragment
+import com.example.astonfinalproject.presentation.screens.FilterEpisodesFragment
+import com.example.astonfinalproject.presentation.screens.FilterLocationsFragment
+import com.example.astonfinalproject.presentation.screens.LocationsFragment
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Binds
@@ -19,7 +28,12 @@ private const val BASE_URL = "https://rickandmortyapi.com/api/"
 @Singleton
 @Component(modules = [AppModule::class])
 interface ApplicationComponent {
-    fun inject(activity: MainActivity)
+    fun inject(fragment: CharactersFragment)
+    fun inject(fragment: LocationsFragment)
+    fun inject(fragment: EpisodesFragment)
+    fun inject(fragment: FilterCharactersFragment)
+    fun inject(fragment: FilterLocationsFragment)
+    fun inject(fragment: FilterEpisodesFragment)
 }
 
 @Module(includes = [NetworkModule::class, AppBindModule::class])
@@ -61,7 +75,19 @@ interface AppBindModule {
 
     @Singleton
     @Binds
-    fun bindRickAndMortyRepository(
-        rickAndMortyRepositoryImpl: RickAndMortyRepositoryImpl
-    ): RickAndMortyRepository
+    fun bindCharactersRepository(
+        charactersRepositoryImpl: CharactersRepositoryImpl
+    ): CharactersRepository
+
+    @Singleton
+    @Binds
+    fun bindLocationsRepository(
+        locationsRepositoryImpl: LocationsRepositoryImpl
+    ): LocationsRepository
+
+    @Singleton
+    @Binds
+    fun bindEpisodesRepository(
+        episodesRepositoryImpl: EpisodesRepositoryImpl
+    ): EpisodesRepository
 }

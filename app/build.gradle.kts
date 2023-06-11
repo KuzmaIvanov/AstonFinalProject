@@ -53,4 +53,8 @@ dependencies {
     kapt(libs.daggerCompiler)
     implementation(libs.retrofit)
     implementation(libs.gson)
+    implementation(libs.lifecycleViewModel)
+    implementation(libs.lifecycleRuntime)
+    kapt(libs.lifecycleCompiler)
+    implementation(libs.coil)
 }

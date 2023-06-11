@@ -1,6 +1,34 @@
 <resources>
     <string name="app_name">AstonFinalProject</string>
+
     <string name="bottom_navigation_characters_label_text">Characters</string>
     <string name="bottom_navigation_locations_label_text">Locations</string>
     <string name="bottom_navigation_episodes_label_text">Episodes</string>
+
+    <string name="character_image_description">Character image</string>
+    <string name="characters_search_view_hint">Search characters…</string>
+
+    <string name="top_app_bar_item_search">Search</string>
+    <string name="top_app_bar_item_filter">Filter</string>
+    <string name="filter_top_app_bar_item_apply">Apply</string>
+
+    <string name="filter_characters_name_edit_text_hint">Name</string>
+    <string name="filter_characters_species_edit_text_hint">Species</string>
+    <string name="filter_characters_type_edit_text_hint">Type</string>
+    <string name="text_view_for_chip_group_character_status">Status:</string>
+    <string name="filter_characters_status_alive_chip_text">Alive</string>
+    <string name="filter_characters_status_dead_chip_text">Dead</string>
+    <string name="filter_characters_status_unknown_chip_text">Unknown</string>
+    <string name="text_view_for_chip_group_character_gender">Gender:</string>
+    <string name="filter_characters_gender_female_chip_text">Female</string>
+    <string name="filter_characters_gender_male_chip_text">Male</string>
+    <string name="filter_characters_gender_genderless_chip_text">Genderless</string>
+    <string name="filter_characters_gender_unknown_chip_text">Unknown</string>
+
+    <string name="filter_locations_name_edit_text_hint">Name</string>
+    <string name="filter_locations_type_edit_text_hint">Type</string>
+    <string name="filter_locations_dimension_edit_text_hint">Dimension</string>
+
+    <string name="filter_episodes_name_edit_text_hint">Name</string>
+    <string name="filter_episodes_episode_edit_text_hint">Episode</string>
 </resources>

@@ -10,10 +10,15 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<VB : ViewBinding>(
     @LayoutRes private val layoutRes: Int
-): Fragment() {
+) : Fragment() {
 
     private var _binding: VB? = null
-    protected val binding get() = requireNotNull(_binding)
+    protected val binding get() = requireNotNull(_binding) { "Binding isn't init" }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,10 +30,10 @@ abstract class BaseFragment<VB : ViewBinding>(
         return binding.root
     }
 
-    abstract fun createBinding(view: View): VB
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    abstract fun createBinding(view: View): VB
 }
